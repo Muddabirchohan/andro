@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" />
+    <title>WMC</title>
+</head>
+
+
+<style>
+    body {
+        background-color: lightcoral;
+    }
+
+    .head {
+        color: white;
+
+    }
+</style>
+
+<body>
+
+
+
+    <h1 align="center"> WMC Rest Api</h1>
+
+    <div id="homepage" class="head" style="width: 300px; background-color: black; margin-left: 500px">
+        <h2> WMC API CALLS </h2>
+    </div>
+    <div id="ninjas"> </div>
+
+    <script type="text/babel">
+
+    var Ninjas = React.createClass ({
+        render: function () {
+            return (
+                <div id="ninja-container">
+                
+                <form id="search" onSubmit={this.handleSubmit}>
+             <label> enter latitiude </label>
+             <input type="text" ref="lat" placeholder="enter latitiude"> </input>             
+             <label> enter longitude </label>
+             <input type="text" ref="lon" placeholder="enter longitude"> </input>             
+                <input type="submit" value="find ninjas">
+                 </form>
+                
+
+                 </div>
+            )
+        }
+    })
+
+
+</script>
+
+
+</body>
+
+</html>
