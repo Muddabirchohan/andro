@@ -9,7 +9,7 @@ const upload = multer({ dest : '/uploads/'});
 const cors = require('cors');
 require("dotenv").config();
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/wmc' ,{ useMongoClient: true });
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://zain:capricorn63@wmc-phczt.mongodb.net/test?retryWrites=true' || 'mongodb://localhost/wmc' ,{ useMongoClient: true });
 mongoose.Promise = global.Promise;
 
 var allowCrossDomain = function(req, res, next) {
