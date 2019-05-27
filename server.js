@@ -68,7 +68,7 @@ app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://zain:capricorn63@wmc-phczt.mongodb.net/test?retryWrites=true' || 'mongodb://localhost/wmc' ,{ useMongoClient: true });
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/wmc' ,{ useMongoClient: true });
 mongoose.Promise = global.Promise;
 
 //const server = http.createServer(app);
