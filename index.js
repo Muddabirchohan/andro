@@ -9,7 +9,7 @@ const upload = multer({ dest : '/uploads/'});
 const cors = require('cors');
 
 
-mongoose.connect('mongodb://localhost/wmc' ,{ useMongoClient: true });
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/wmc' ,{ useMongoClient: true });
 mongoose.Promise = global.Promise;
 
 var allowCrossDomain = function(req, res, next) {
