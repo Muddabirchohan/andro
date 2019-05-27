@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const multer = require('multer');
 const upload = multer({ dest : '/uploads/'});
 const cors = require('cors');
-
+require("dotenv").config();
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/wmc' ,{ useMongoClient: true });
 mongoose.Promise = global.Promise;
